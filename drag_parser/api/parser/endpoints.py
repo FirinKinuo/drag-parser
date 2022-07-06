@@ -14,7 +14,7 @@ router = APIRouter(
     response_model=list[ParsedPrice],
     name="Parse Prices",
     description="Спарсить цены с указанного хоста.\t"
-                "Поддерживаемые хосты: plata57.ru, vekolom.ru.\t"
+                "Поддерживаемые хосты: plata57.ru, vekolom.ru, uralvtordrag.ru.\t"
                 "Значение price возвращается в рублях за кг",
     responses={400: {"description": "Bad Request - Был передан неподдерживаемый хост"}}
 )
