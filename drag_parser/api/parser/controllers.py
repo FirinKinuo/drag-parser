@@ -1,5 +1,9 @@
 from hashlib import md5
+
+from cachetools import cached, TTLCache
+
 from drag_parser import parser
+
 from .schemas import ParsedPrice
 
 
@@ -22,6 +26,7 @@ def parse_prices_from_categories_by_host(host: str) -> list[ParsedPrice]:
     ) for price in prices]
 
 
+@cached(cache=TTLCache(maxsize=1024, ttl=50 * 60))
 def parse_prices_by_host(host: str) -> list[ParsedPrice]:
     if host in parser.HOSTS_WITH_CATEGORIES:
         return parse_prices_from_categories_by_host(host=host)
