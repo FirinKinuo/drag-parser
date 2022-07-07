@@ -229,7 +229,7 @@ class ParserPlata57(Parser):
 class ParserUralvtordrag(ParserCategories):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.url = "https://www.uralvtordrag.ru"
+        self.url = "https://uralvtordrag.ru"
 
     @classmethod
     def _parse_title(cls, row: Tag) -> str:
