@@ -9,7 +9,7 @@ colorama==0.4.4
 fastapi==0.78.0
 h11==0.13.0
 idna==3.3
-lxml==4.9.0
+lxml==4.9.1
 pydantic==1.9.1
 requests==2.27.1
 sniffio==1.2.0
